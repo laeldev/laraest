@@ -10,23 +10,15 @@ class siteController extends Controller
 
     public function index(){
 
-        $nome = 'André';
-
         $data = [
-            'apelido_nome' => $nome,
+            'ingredientes' => [
+                'farinha',
+                'ovos',
+                'farinha 2',
+                'ovos 2'
+            ]
         ];
 
         return view('bemvindo',$data);
-    }
-
-    public function sair(){
-        return view('sair');
-    }
-
-    public function users(Request $r){
-        $data=[
-            'quantidade' => $r->qnt
-        ];
-        return view('usuarios', $data);
     }
 }
